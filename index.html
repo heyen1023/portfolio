@@ -23,7 +23,6 @@
     .div {
       width: 100%;
       background-color: #ccc;
-      border-top: 1px dashed #aaa;
       display: flex;
     }
     .left {
@@ -50,11 +49,11 @@
       color: #eee;
     }
 
-    #section1 {
+    #home {
       position: relative;
       height: 100vh;
     }
-    #section1 h1 {
+    #home h1 {
       width: 500px;
       height: 120px;
       text-align: center;
@@ -65,16 +64,25 @@
       margin-top: -60px;
       color: #eee;
     }
-    #section2 {
+    #skill {
       height: 100vh;
     }
-    #section2 .right .profile {
+    #skill .right {
+      padding: 100px;
+      box-sizing: border-box;
+    }
+    #skill .right .profile {
+      border: 1px solid #000;
+      width: 100%;
+      height: 100%;
+    }
+    #project {
+      height: 100vh;
+    }
+    #project .right .h1_skill {
 
     }
-    #section3 {
-      height: 100vh;
-    }
-    #section4 {
+    # {
       height: 100vh;
     }
     #contact {
@@ -89,10 +97,10 @@
   </script>
   <div id="wrap">
     <header></header>
-    <div id="section1" class="div">
+    <div id="home" class="div">
       <h1>WELCOME TO <br> MY PORTFOLIO</h1>
     </div>
-    <div id="section2" class="div">
+    <div id="profile" class="div">
       <div class="left">
         <h1 class="h1">PROFILE</h1>
       </div>
@@ -102,20 +110,50 @@
         </div>
       </div>
     </div>
-    <div id="section3" class="div">
+    <div id="skill" class="div">
       <div class="left">
         <h1 class="h1">SKILL</h1>
       </div>
       <div class="right">
-        <div class="skill n1"></div>
-        <div class="skill n2"></div>
-        <div class="skill n3"></div>
-        <div class="skill n4"></div>
-        <div class="skill n5"></div>
-        <div class="skill n6"></div>
+        <div class="skill n1">
+          <h1 class="h1_skill">HTML</h1>
+          <h2 class="h2">
+            마크업 랭귀지, 웹표준, 웹접근성을 준수하여 구조화
+          </h2>
+        </div>
+        <div class="skill n2">
+          <h1 class="h1_skill">CSS</h1>
+          <h2 class="h2">
+            구조에 따른 class, id 설정과 최신 flex, grid 활용
+          </h2>
+        </div>
+        <div class="skill n3">
+          <h1 class="h1_skill">JavaScript</h1>
+          <h2 class="h2">
+            적절한 함수의 응용으로 동적인 웹페이지 구현
+          </h2>
+        </div>
+        <div class="skill n4">
+          <h1 class="h1_skill">jquery</h1>
+          <h2 class="h2">
+            보다 간단하고 효율적이게 이벤트 동작을 구현
+          </h2>
+        </div>
+        <div class="skill n5">
+          <h1 class="h1_skill">Photoshop</h1>
+          <h2 class="h2">
+            AI를 활용한 이미지 보정 및 편집 등 디자인 작업
+          </h2>
+        </div>
+        <div class="skill n6">
+          <h1 class="h1_skill">Illurstrator</h1>
+          <h2 class="h2">
+            아이콘, 일러스트, 백터이미지, 배너 등 디자인 작업
+          </h2>
+        </div>
       </div>
     </div>
-    <div id="section4" class="div">
+    <div id="project" class="div">
       <div class="left">
         <h1 class="h1">PROJECT</h1>
       </div>
