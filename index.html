@@ -34,8 +34,54 @@
           $home.css('width', '50%');
         }
       });
+
+      // const profileH1 = $('#profile>.left>h1');
+      // profileH1.hide();
+      // if ($home.css('width', '50%')) {
+      //   profileH1.show();
+      // }
+
+
+      // 초기 설정: #profile > .left > h1 숨김
+      $('#profile > .left > h1').hide();
+
+      $(window).on('scroll', function () {
+        // 현재 스크롤 위치
+        const scrollY = $(window).scrollTop();
+
+        // #profile의 offset 가져오기
+        const profileOffset = $('#profile').offset().top;
+
+        // #home 요소 가져오기
+        const $home = $('#home');
+        const $profileTitle = $('#profile > .left > h1');
+
+        if (scrollY < profileOffset) {
+          // 스크롤 위치가 #profile보다 위일 경우 너비 점진적으로 줄임
+          const maxScroll = profileOffset; // 최대 스크롤 지점
+          const scrollRatio = scrollY / maxScroll; // 비율 계산 (0 ~ 1)
+          const newWidth = 100 - scrollRatio * 50; // 100% -> 50%
+          $home.css('width', `${newWidth}%`);
+
+          // 너비가 50% 미만일 경우 h1 숨기기 (부드럽게)
+          if (newWidth > 50) {
+            $profileTitle.fadeOut(); // 300ms 동안 부드럽게 숨김
+          }
+        } else {
+          // #profile에 도달하면 너비 50% 고정
+          // $home.css('width', '50%');
+
+          // 너비가 50%일 경우 h1 나타내기 (부드럽게)
+          $profileTitle.fadeIn(1000); // 500ms 동안 부드럽게 표시
+        }
+      });
     });
+
+
+
   </script>
+
+
 
 
 
@@ -61,7 +107,16 @@
       </div>
       <div class="right">
         <div class="profile">
-          <img src="" alt="사진">
+          <div class="img"></div>
+          <h2>끊임없이 배우고 성장하는 웹퍼블리셔 김혜연입니다.</h2>
+          <div class="profile_box hobby">
+            <h1>hobby</h1>
+            <ul>
+              <li>악기 연주</li>
+              <li>탁구, 헬스 등 운동</li>
+              <li>앵무새 카페</li>
+            </ㅕl>
+          </div>
         </div>
       </div>
     </div>
